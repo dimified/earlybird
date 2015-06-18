@@ -2,6 +2,6 @@
 
 ## Authors
 
-Boris Maric
-Dimitri Reifschneider
-Robert Trost
+* Boris Maric
+* Dimitri Reifschneider
+* Robert Trost
