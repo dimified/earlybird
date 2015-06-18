@@ -1,6 +1,6 @@
 # Early bird knowledge
 
-![Logo](/assets/logo.jpg)
+![Logo](/projects/MXD-TEST/repos/earlybird/browse/assets/logo.jpg)
 
 ## Authors
 
