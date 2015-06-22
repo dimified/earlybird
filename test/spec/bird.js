@@ -1,4 +1,6 @@
 /*global describe, it */
+
+/* global jest, describe, it: false */
 'use strict';
 
 (function (Bird, Duck) {

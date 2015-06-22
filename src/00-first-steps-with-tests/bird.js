@@ -3,6 +3,8 @@
  * Date: 18/06/15
  */
 
+/* global module: false */
+
 // Some helper functions
 function toInt (x) {
     x = Number(x);

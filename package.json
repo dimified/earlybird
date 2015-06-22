@@ -1,0 +1,26 @@
+{
+  "name": "earlybird",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "jest-cli": "0.4.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://d.reifschneider@stash-int.maxdome.de/scm/mxd-test/earlybird.git"
+  },
+  "keywords": [
+    "early",
+    "bird",
+    "mxd"
+  ],
+  "author": "Dimitri Reifschneider",
+  "license": "Licensed under Maxdome"
+}
