@@ -4,20 +4,34 @@
  */
 
 module.exports = function (grunt) {
+
+    // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
         'http-server': {
             src: {
                 root: '',
                 port: 9000,
-                host: '0.0.0.0',
+                host: 'localhost',
                 showDir: true,
                 runInBackground: false
+            }
+        },
+        browserify: {
+            dist: {
+                options: {
+                    watch: true
+                },
+                src: 'solutions/02-player/build/{,*/}*.js',
+                dest: 'solutions/02-player/bundle.js'
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-http-server');
-
-    grunt.registerTask('serve', ['http-server']);
+    grunt.registerTask('serve', [
+        'browserify',
+        'http-server'
+    ]);
     grunt.registerTask('default', 'serve');
 };
