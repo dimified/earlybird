@@ -5,10 +5,12 @@
 
 /* global jest, describe, it: false */
 
-jest.dontMock('../solutions/00-first-steps-with-tests/bird');
+'use strict';
+
+jest.dontMock('../solutions/00-first-steps-with-tests/src/bird');
 
 describe('Bird', function() {
-    var Bird = require('../solutions/00-first-steps-with-tests/bird');
+    var Bird = require('../solutions/00-first-steps-with-tests/src/bird');
 
     var bird = new Bird({
         type: 'Bird',

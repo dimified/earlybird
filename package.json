@@ -9,7 +9,7 @@
   "jest": {
     "scriptPreprocessor": "preprocessor.js",
     "unmockedModulePathPatterns": [
-      "/node_modules/react"
+      "react"
     ]
   },
   "directories": {
