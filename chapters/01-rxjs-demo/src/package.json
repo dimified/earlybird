@@ -1,0 +1,10 @@
+{
+  "name": "rxjs",
+  "version": "0.0.0",
+  "devDependencies": {
+    "rx": "latest"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
