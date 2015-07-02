@@ -11,7 +11,7 @@ var Controls = require('./controls');
 var Video = React.createClass({
     render: function () {
         return (
-            <video src="assets/bigbuckbunny_480p.ogv"></video>
+            <video src="assets/bigbuckbunny480p.ogv"></video>
         );
     }
 });

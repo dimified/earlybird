@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: 'chapters/04-player-with-react',
 
 
     // frameworks to use
@@ -15,8 +15,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'chapters/04-player-with-react/test/**/*.spec.js'
+        'test/**/*.spec.js'
     ],
+
+    // A map of path-proxy pairs
+    proxies: {
+        '/assets/': 'http://localhost:9001/assets/'
+    },
 
 
     // list of files to exclude
@@ -27,7 +32,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        'chapters/04-player-with-react/test/**/*.spec.js': ['browserify']
+        'test/**/*.spec.js': ['browserify']
     },
 
     // Test bundles can be configured through the browserify Karma

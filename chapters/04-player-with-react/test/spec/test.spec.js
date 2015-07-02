@@ -12,11 +12,25 @@ var ReactAddons = require('react/addons');
 var Player = require('../../src/player');
 
 var TestUtils = React.addons.TestUtils;
+var Perf = React.addons.Perf;
 
 describe('Player', function () {
+    var renderTime = 20;
+
+    Perf.start();
     var player = TestUtils.renderIntoDocument(
         <Player />
     );
+    Perf.printInclusive();
+    Perf.stop();
+
+    it('should be rendered within ' + renderTime + ' ms', function () {
+        expect(Perf.getLastMeasurements()[1].totalTime).toBeLessThan(renderTime);
+    });
+
+    /**
+     * Total time expectation for rendering
+     */
 
     var playback = TestUtils.findRenderedDOMComponentWithClass(
         player, 'playback'
@@ -41,5 +55,6 @@ describe('Player', function () {
         expect(player.refs.video.getDOMNode().paused).toBeTruthy();
     });
 });
+
 
 
