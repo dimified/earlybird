@@ -28,7 +28,7 @@ var Player = React.createClass({
     },
     render: function () {
         return (
-            <div className="canvas">
+            <div className="player">
                 <Video ref="video" />
                 <div onClick={this.handleClick} className="controls"><Controls playback={this.state.playback}/></div>
             </div>
