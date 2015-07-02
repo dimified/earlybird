@@ -10,10 +10,9 @@ video {
 }
 
 .controls {
-    float: left;
-    width: 100%;
     position: relative;
     bottom: 150px;
+    height: 0;
 }
 
 .controls button.playback {

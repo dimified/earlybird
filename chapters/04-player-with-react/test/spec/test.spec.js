@@ -18,8 +18,6 @@ describe('Player', function () {
         var player = TestUtils.renderIntoDocument(
             <Player />
         );
-
-        expect(1===1).toBeTruthy();
     });
 });
 
