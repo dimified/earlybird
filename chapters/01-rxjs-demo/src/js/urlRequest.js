@@ -51,7 +51,7 @@ function getJson(requestUrl, observer){
                 observer.onError('There was an error 400')
            }
         }
-    }
+    };
 
     xmlhttp.open("GET", requestUrl, true);
     xmlhttp.send();

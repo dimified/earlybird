@@ -3,7 +3,7 @@
  * Date: 18/06/15
  */
 
-/* global module: false */
+'use strict';
 
 // Some helper functions
 function toInt (x) {
@@ -18,7 +18,6 @@ var Bird = function (o) {
     this.isFlyable = o.isFlyable;
 };
 
-
 Bird.prototype.getPosition = function () {
     return this.pos;
 };
@@ -30,13 +29,15 @@ Bird.prototype.getType = function () {
 // TODO: Implement the say() function
 // A bird should say 'tweet'
 Bird.prototype.say = function () {
+    console.log('tweet');
     return this;
 };
 
 // TODO: Implement the move() function
 // A bird should move a given number of meters.
 // What if no value is passed?
-Bird.prototype.move = function () {
+Bird.prototype.move = function (m) {
+    console.log('Moved to ' + (m ? this.pos = this.pos + m : ++this.pos )+ ' m');
     return this;
 };
 
@@ -50,22 +51,21 @@ Bird.prototype.move = function () {
 // Hint: What about missing parameters?
 // Hint: What if the parameters are identical?
 Bird.prototype.fly = function (b, c) {
+    if (arguments.length < 2) {
+        throw new Error('No arguments given');
+    } else {
+        if (this.isFlyable) {
+            if (b !== c) {
+                this.move(
+                    toInt( Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2)) )
+                );
+            } else {
+                console.log('Bird just went up and down again');
+                return false;
+            }
+        } else {
+            throw new Error('This bird can not fly');
+        }
+    }
     return this;
 };
-
-// Typical inheritance and method overloading via prototype
-
-// Subclass Duck
-var Duck = function (o) {
-    Bird.call(this, o);
-};
-
-Duck.prototype = Object.create(Bird.prototype);
-
-// TODO: Implement the say() function
-// A bird should say 'quack'
-Duck.prototype.say = function () {
-    return this;
-};
-
-Duck.prototype.constructor = Duck;

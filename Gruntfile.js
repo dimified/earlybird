@@ -26,11 +26,21 @@ module.exports = function (grunt) {
                 src: 'solutions/02-player/build/{,*/}*.js',
                 dest: 'solutions/02-player/bundle.js'
             }
+        },
+        express: {
+            server: {
+                options: {
+                    port: 9002,
+                    hostname: 'localhost',
+                    server: 'chapters/02-express-server/server.js'
+                }
+            }
         }
     });
 
     grunt.registerTask('serve', [
         'browserify',
+        'express',
         'http-server'
     ]);
     grunt.registerTask('default', 'serve');
