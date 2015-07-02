@@ -6,7 +6,7 @@
 'use strict';
 
 var React = require('react');
-var Controls = require('./controls.js');
+var Controls = require('./controls');
 
 var Video = React.createClass({
     render: function () {

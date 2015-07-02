@@ -7,7 +7,7 @@
 
 var React = require('react');
 
-var Player = require('./player.js');
+var Player = require('./player');
 
 
 /**

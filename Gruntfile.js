@@ -21,10 +21,12 @@ module.exports = function (grunt) {
         browserify: {
             dist: {
                 options: {
-                    watch: true
+                    watch: true,
+                    transform: ['reactify']
                 },
-                src: 'solutions/02-player/build/{,*/}*.js',
-                dest: 'solutions/02-player/bundle.js'
+                files: {
+                    'chapters/04-player-with-react/bundle.js': 'chapters/04-player-with-react/src/**/*.js'
+                }
             }
         },
         express: {

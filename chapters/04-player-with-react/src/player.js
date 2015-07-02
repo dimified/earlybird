@@ -7,8 +7,8 @@
 
 var React = require('react');
 
-var Video = require('./video.js');
-var Controls = require('./controls.js');
+var Video = require('./video');
+var Controls = require('./controls');
 
 var Player = React.createClass({
     getInitialState: function () {

@@ -27,10 +27,12 @@
     "karma-browserify": "4.2.1",
     "karma-chrome-launcher": "0.2.0",
     "karma-jasmine": "0.3.5",
-    "karma-react-jsx-preprocessor": "0.1.1",
+    "karma-phantomjs-launcher": "^0.2.0",
     "load-grunt-tasks": "3.2.0",
+    "phantomjs": "^1.9.17",
     "react": "0.13.3",
-    "react-tools": "0.13.3"
+    "react-tools": "0.13.3",
+    "reactify": "^1.1.1"
   },
   "repository": {
     "type": "git",

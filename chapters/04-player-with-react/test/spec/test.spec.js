@@ -9,7 +9,7 @@
 
 var React = require('react');
 var ReactAddons = require('react/addons');
-var Player = require('../build/player.js');
+var Player = require('../../src/player');
 
 var TestUtils = React.addons.TestUtils;
 
@@ -18,7 +18,7 @@ describe('Player', function () {
         var player = TestUtils.renderIntoDocument(
             <Player />
         );
-        console.log('hello world');
+
         expect(1===1).toBeTruthy();
     });
 });

@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        //'solutions/02-player/test/test.js'
+        'chapters/04-player-with-react/test/**/*.spec.js'
     ],
 
 
@@ -27,13 +27,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        //'solutions/02-player/test/*.js': ['react-jsx', 'browserify']
+        'chapters/04-player-with-react/test/**/*.spec.js': ['browserify']
     },
 
     // Test bundles can be configured through the browserify Karma
     // configuration property.
     browserify: {
-        debug: true
+        debug: false,
+        transform: ['reactify']
     },
 
 
@@ -44,7 +45,7 @@ module.exports = function(config) {
 
 
     // web server port
-    port: 9876,
+    port: 9001,
 
 
     // enable / disable colors in the output (reporters and logs)
